@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ting97.top/"/>
-  <updated>2017-08-04T13:20:05.490Z</updated>
+  <updated>2017-08-04T13:46:45.713Z</updated>
   <id>http://ting97.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://ting97.top/2017/08/03/start/"/>
     <id>http://ting97.top/2017/08/03/start/</id>
     <published>2017-08-03T09:11:23.000Z</published>
-    <updated>2017-08-04T13:20:05.490Z</updated>
+    <updated>2017-08-04T13:46:45.713Z</updated>
     
     <content type="html"><![CDATA[<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>忙了两天，终于在舍友、百度的帮助下，还有自己的努力下搭好了属于自己的博客。之前在阿里云申请了一个六个月的免费虚拟主机，在上面搭了一个WordPress的博客，但由于虚拟主机“保养费”太贵，光用来撘一个博客似乎太过奢侈。于是转战GitHub，搭建博客的过程中出现了太多问题，百度了许久，最后还是在舍友wzc和zk的帮助下完成搭建。深感要做好做每件事的不易。</p>
 <p>在安装hexo时，安装了4-5次不成功，最后在知乎上找到答案：npm源有问题，将其换成taobao的cnpm源后立即解决问题，原因npm源的下载速度太慢导致下载不成功。</p>
@@ -29,7 +29,7 @@
 <h2 id="参考博客教程："><a href="#参考博客教程：" class="headerlink" title="参考博客教程："></a>参考博客教程：</h2><ul>
 <li><p><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a>里面虽是Mac的教程，但是和Windows搭建博客是一样的。</p>
 </li>
-<li><p><a href="http://www.jianshu.com/p/5973c05d7100" target="_blank" rel="external">2个小时教你hexo博客添加评论、打赏、RSS等功能</a></p>
+<li><p><a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="external">hexo的next主题个性化教程:打造炫酷网站</a></p>
 </li>
 </ul>
 <p>嘿嘿，不说了，继续去布置我的博客，开始我的博客之旅~</p>
