@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ting97</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ting97.top/"/>
+  <updated>2017-08-04T13:20:05.490Z</updated>
+  <id>http://ting97.top/</id>
+  
+  <author>
+    <name>Ting97</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Start My Blog</title>
+    <link href="http://ting97.top/2017/08/03/start/"/>
+    <id>http://ting97.top/2017/08/03/start/</id>
+    <published>2017-08-03T09:11:23.000Z</published>
+    <updated>2017-08-04T13:20:05.490Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>忙了两天，终于在舍友、百度的帮助下，还有自己的努力下搭好了属于自己的博客。之前在阿里云申请了一个六个月的免费虚拟主机，在上面搭了一个WordPress的博客，但由于虚拟主机“保养费”太贵，光用来撘一个博客似乎太过奢侈。于是转战GitHub，搭建博客的过程中出现了太多问题，百度了许久，最后还是在舍友wzc和zk的帮助下完成搭建。深感要做好做每件事的不易。</p>
+<p>在安装hexo时，安装了4-5次不成功，最后在知乎上找到答案：npm源有问题，将其换成taobao的cnpm源后立即解决问题，原因npm源的下载速度太慢导致下载不成功。</p>
+<p>更换taobao的cnpm源：在电脑cmd里输入”npm install -g cnpm –registry=<a href="https://registry.npm.taobao.prg&quot;即可，之后有关npm的命令换成用cnpm执行，你会发现下载速度大幅提升。" target="_blank" rel="external">https://registry.npm.taobao.prg&quot;即可，之后有关npm的命令换成用cnpm执行，你会发现下载速度大幅提升。</a></p>
+<p>在用hexo搭博客时有过三次操作失误导致文件丢失，导致本地预览不了网站，第一次出现这样问题时，纠结很久，百度也找不到答案，最后重新开始把整个文件夹删除重新‘init’。之后两次有同样的问题果断重新建。<br>博客主题的话，十分推崇NexT，许多人都用了这个主题，简洁美观（符合码农的审美，哈哈），最主要的是部署博客，NexT这个主题在网上的教程十分详细（其他没用过，也不清楚），百度就能搜到好多！</p>
+<h2 id="参考博客教程："><a href="#参考博客教程：" class="headerlink" title="参考博客教程："></a>参考博客教程：</h2><ul>
+<li><p><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a>里面虽是Mac的教程，但是和Windows搭建博客是一样的。</p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/5973c05d7100" target="_blank" rel="external">2个小时教你hexo博客添加评论、打赏、RSS等功能</a></p>
+</li>
+</ul>
+<p>嘿嘿，不说了，继续去布置我的博客，开始我的博客之旅~</p>
+<hr>
+<h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><p>日期: 2017-08-04 21:13:30<br>很烦又把博客搞坏了，今天重建新又搭了一遍，以后不要随便改博客文件夹的名字这样会导致git识别不出，丢失许多东西…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;p&gt;忙了两天，终于在舍友、百度的帮助下，还有自己的努力下搭好了属于自己的博客。之前在阿里云申请了一个六个月的免费虚拟主机，在上面搭了一个Word
+    
+    </summary>
+    
+      <category term="start" scheme="http://ting97.top/categories/start/"/>
+    
+    
+      <category term="start" scheme="http://ting97.top/tags/start/"/>
+    
+  </entry>
+  
+</feed>
