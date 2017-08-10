@@ -114,18 +114,18 @@
 
 
 
-<meta name="description" content="题目描述 Description给出两个正整数A和B，计算A*B的值。保证A和B的位数不超过500位。 输出描述 Output Description输出A*B的值 想法模拟手工计算算法：先将两个数反转，并将字符型转成整形数组，然后按一般我们现实生活中的计算一样，从一个大数个位数乘以另一大数的所有数，再计算十位….以此类推，计算过程中注意数组元素会溢出，因为一个数组元素只放一个个位数。 代码voi">
+<meta name="description" content="题目描述 Description给出两个正整数A和B，计算A*B的值。保证A和B的位数不超过500位。 输出描述 Output Description输出A*B的值 想法模拟手工计算算法：先将两个数反转，并将字符型转成整形数组，然后按一般我们现实生活中的计算一样，从一个大数个位数乘以另一大数的所有数，再计算十位….以此类推，计算过程中注意数组元素会溢出，因为一个数组元素只放一个个位数。 代码123">
 <meta name="keywords" content="codevs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数乘法">
 <meta property="og:url" content="http://ting97.top/2017/08/10/大数乘法/index.html">
 <meta property="og:site_name" content="Ting97">
-<meta property="og:description" content="题目描述 Description给出两个正整数A和B，计算A*B的值。保证A和B的位数不超过500位。 输出描述 Output Description输出A*B的值 想法模拟手工计算算法：先将两个数反转，并将字符型转成整形数组，然后按一般我们现实生活中的计算一样，从一个大数个位数乘以另一大数的所有数，再计算十位….以此类推，计算过程中注意数组元素会溢出，因为一个数组元素只放一个个位数。 代码voi">
+<meta property="og:description" content="题目描述 Description给出两个正整数A和B，计算A*B的值。保证A和B的位数不超过500位。 输出描述 Output Description输出A*B的值 想法模拟手工计算算法：先将两个数反转，并将字符型转成整形数组，然后按一般我们现实生活中的计算一样，从一个大数个位数乘以另一大数的所有数，再计算十位….以此类推，计算过程中注意数组元素会溢出，因为一个数组元素只放一个个位数。 代码123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-10T13:06:21.056Z">
+<meta property="og:updated_time" content="2017-08-10T13:16:44.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大数乘法">
-<meta name="twitter:description" content="题目描述 Description给出两个正整数A和B，计算A*B的值。保证A和B的位数不超过500位。 输出描述 Output Description输出A*B的值 想法模拟手工计算算法：先将两个数反转，并将字符型转成整形数组，然后按一般我们现实生活中的计算一样，从一个大数个位数乘以另一大数的所有数，再计算十位….以此类推，计算过程中注意数组元素会溢出，因为一个数组元素只放一个个位数。 代码voi">
+<meta name="twitter:description" content="题目描述 Description给出两个正整数A和B，计算A*B的值。保证A和B的位数不超过500位。 输出描述 Output Description输出A*B的值 想法模拟手工计算算法：先将两个数反转，并将字符型转成整形数组，然后按一般我们现实生活中的计算一样，从一个大数个位数乘以另一大数的所有数，再计算十位….以此类推，计算过程中注意数组元素会溢出，因为一个数组元素只放一个个位数。 代码123">
 
 
 
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  356
+                  357
                 </span>
               
 
@@ -443,47 +443,8 @@
         <h2 id="题目描述-Description"><a href="#题目描述-Description" class="headerlink" title="题目描述 Description"></a>题目描述 Description</h2><p>给出两个正整数A和B，计算A*B的值。保证A和B的位数不超过500位。</p>
 <h2 id="输出描述-Output-Description"><a href="#输出描述-Output-Description" class="headerlink" title="输出描述 Output Description"></a>输出描述 Output Description</h2><p>输出A*B的值</p>
 <h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>模拟手工计算算法：先将两个数反转，并将字符型转成整形数组，然后按一般我们现实生活中的计算一样，从一个大数个位数乘以另一大数的所有数，再计算十位….以此类推，计算过程中注意数组元素会溢出，因为一个数组元素只放一个个位数。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>void mul(char a[],char b[])
-{
-    int c[505] = {0},d[505] = {0},sum[1001] = {0};
-    int i,j,k,l,n,m,s;
-
-    m = strlen(a);
-    n = strlen(b);
-
-    for(i = 0;i &lt; m;i++)//将a[]反转并转换成整型
-        c[i] = a[m - i - 1] - &apos;0&apos;;
-
-    for(i = 0;i &lt; n;i++)
-        d[i] = b[n - i - 1] - &apos;0&apos;;
-
-    for(i = 0;i &lt; m;i++)
-        for(j = 0;j &lt; n;j++)
-        {
-            sum[i + j] += c[i] * d[j];//c的i位与d的j位相乘
-            /*下面是防止数溢出，确保一个数组元素只有一个个位数*/
-            for(l = i;l &lt;= i + j;l++)
-            {
-                s = l;
-                k = sum[l]; 
-                sum[l] = 0;
-                while(k &gt; 0)
-                {
-                    sum[s] += k % 10;
-                    k /= 10;
-                    s++;
-                }
-            }
-        }
-
-    for(i =1000;i &gt;=0;i--)//找出大数起始位置
-        if(sum[i] != 0)
-            break;
-
-    for(j = i;j &gt;= 0;j--)
-        printf(&quot;%d&quot;,sum[j]);    
-}
-</code></pre><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>路漫漫其修远兮，需要走的路还很长。虽然目前很菜，但是慢慢来吧，面包会有的牛奶也会有的。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">void mul(char a[],char b[])</div><div class="line">&#123;</div><div class="line">	int c[505] = &#123;0&#125;,d[505] = &#123;0&#125;,sum[1001] = &#123;0&#125;;</div><div class="line">	int i,j,k,l,n,m,s;</div><div class="line"></div><div class="line">	m = strlen(a);</div><div class="line">	n = strlen(b);</div><div class="line"></div><div class="line">	for(i = 0;i &lt; m;i++)//将a[]反转并转换成整型</div><div class="line">		c[i] = a[m - i - 1] - &apos;0&apos;;</div><div class="line">	</div><div class="line">	for(i = 0;i &lt; n;i++)</div><div class="line">		d[i] = b[n - i - 1] - &apos;0&apos;;</div><div class="line">	</div><div class="line">	for(i = 0;i &lt; m;i++)</div><div class="line">		for(j = 0;j &lt; n;j++)</div><div class="line">		&#123;</div><div class="line">			sum[i + j] += c[i] * d[j];//c的i位与d的j位相乘</div><div class="line">		    /*下面是防止数溢出，确保一个数组元素只有一个个位数*/</div><div class="line">			for(l = i;l &lt;= i + j;l++)</div><div class="line">			&#123;</div><div class="line">				s = l;</div><div class="line">				k = sum[l]; </div><div class="line">				sum[l] = 0;</div><div class="line">				while(k &gt; 0)</div><div class="line">				&#123;</div><div class="line">					sum[s] += k % 10;</div><div class="line">					k /= 10;</div><div class="line">					s++;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	for(i =1000;i &gt;=0;i--)//找出大数起始位置</div><div class="line">		if(sum[i] != 0)</div><div class="line">			break;</div><div class="line"></div><div class="line">	for(j = i;j &gt;= 0;j--)</div><div class="line">		printf(&quot;%d&quot;,sum[j]);	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>路漫漫其修远兮，需要走的路还很长。虽然目前很菜，但是慢慢来吧，面包会有的牛奶也会有的。</p>
 
       
     </div>
@@ -734,7 +695,7 @@
 
 -->
   <div class="theme-info">
-  <i class="fa fa-pencil" aria-hidden="true"></i> <span class="post-count">The Blog has 906 words</span>
+  <i class="fa fa-pencil" aria-hidden="true"></i> <span class="post-count">The Blog has 907 words</span>
 </div>
 
         
